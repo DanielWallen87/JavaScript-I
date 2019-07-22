@@ -83,8 +83,8 @@ console.log("Car " + lastCar.id + " is a " + lastCar.car_make + " " + lastCar.ca
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 
 const alphaCars = inventory.sort ((a, b) => {
-    if (a.car_model < b.car_model) return -1; // a has a lower alpha value than b
-    else if (a.car_model > b.car_model) return 1; // a has a great alpha value than b
+    if (a.car_model < b.car_model) return -1; // a has a lower alphanumerical value than b
+    else if (a.car_model > b.car_model) return 1; // a has a greater alphanumerical value than b
     return 0; // a and b are equal
 })
 
@@ -106,12 +106,12 @@ console.log(howManyOldCars);
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
-const BMWAndAudi = inventory.filter(car => {
+const bmwAndAudi = inventory.filter(car => {
     if (car.car_make === "BMW") return car;
     if (car.car_make === "Audi") return car;
 })
-console.log(BMWAndAudi);;
+console.log(bmwAndAudi);;
 
 // ...it already shows in the console, so I don't really understand the point of part 2, but here you go.
 
-console.log(JSON.stringify(BMWAndAudi));
+console.log(JSON.stringify(bmwAndAudi));
